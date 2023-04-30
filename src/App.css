@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  
+  box-sizing: border-box;
+}
+body {
+  height: 100svh;
+  width: 100%;
+}
+.homeComponent {
+  text-shadow: 0px 6px 7px rgba(0,0,0,0.71);
+  backdrop-filter: blur(13.3px);
+  min-height: 100svh;
+  animation: movingBackground 70s ease infinite;
+}
+.topSection {
+  padding: 30px 15px;
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.3px);
+  -webkit-backdrop-filter: blur(3.3px);
+}
+.sunny {
+  background: url("pic/sunnysky.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.cloudy {
+  background: url("pic/cloudysky.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.night {
+  background: url('pic/nightBackground.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.fog {
+  background: url('pic/foggy.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.drizzle {
+  background: url('pic/drizzleBackground.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.freezingDrizzle {
+  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url('pic/freezingDrizzleBackground.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.snow {
+  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url('pic/snowing.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.rainy {
+  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url('pic/raining.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.freezingRain {
+  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url('pic/freezingRainBackground.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.thunderstorm {
+  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url('pic/thunderstormBackground.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.thunderstormHail {
+  
+  background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url('pic/thunderstormHailBackground.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.uv {
+  height: 70px;
+  filter: brightness(10%);
+}
+.cityName {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.64);
+}
+.weatherIcon {
+  height: 200px;
+}
+.greeting {
+  color: white;
+}
+.greetingWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.threeDots {
+  height: 20px;
+  border: 3px solid white;
+  padding: 8px 15px;
+  border-radius: 50%;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+.weatherSection {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.currentTemp {
+  margin-top: 20px;
+  font-size: 70px;
+}
+.weatherCondition {
+  font-weight: 400;
+  font-size: 30px;
+  margin-top: -10px;
+}
+.nextDays {
+  margin-top: 30px;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #8af26e,
+      0 0 21px #fff,
+      0 0 42px #8000ff,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+  border: 2px solid white;
+  padding: 7px 20px;
+  padding-bottom: 9px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.lastSection {
+  margin-top: 50px;
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.3px);
+  -webkit-backdrop-filter: blur(3.3px);
+  width: 100%;
+  padding: 10px;
+}
+.riseSetIcon {
+  height: 70px;
+}
+.row, .row > div {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.modal {
+  position: fixed;
+  border-radius: 10px;
+  color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1.3em;
+  width: 50ch;
+  box-shadow: 0 0 1em rgb(0 0 0 / .3);
+  text-shadow: none;
+  background: white;
+  border: 3px outset grey;
+  box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem #ccc;
+  & > * {
+    margin: 0 0 0.5rem 0;
+  }
+}
+.modal::backdrop {
+  background: rgb(0 0 0 / 0.7);
+}
+.modalHeader {
+  display: grid;
+  place-items: center;
+  margin-bottom: 30px;
+}
+.closeModal {
+  color: white;
+  background: black;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  padding: .3em;
+  border: 2px solid black;
+  text-align: center;
+  margin-top: 20px;
+}
+.preferenceLinks {
+  display: flex;
+  flex-direction: column;
+}
+.modalLastSection {
+  display: grid;
+}
+.changeCelsius {
+  color: black;
+  outline: none;
+  padding: 1em;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.row {
+  justify-content: space-around;
+  width: 100%;
+}
+.rowDetails {
+  justify-content: space-between !important;
+}
+.addMargin {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.time {
+  font-size: 20px;
+  margin-left: 10px;
+  color: white;
+}
+.rise {
+  height: 50px;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+.rainDrops {
+  height: 30px;
+  margin-right: 15px;
+}
+hr {
+  border-color: rgba(255, 255, 255, 0.24);
+}
+.loading {
+  position: absolute;
+  z-index: 5;
+  height: 100%;
+  width: 100%;
+  background: #000000;
+  display: grid;
+  place-items: center;
+  
+}
+.spinner {
+  border: transparent;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+.alignCenter {
+  text-align: center;
+}
+.white {
+  color: white;
+}
+.pleaseWait {
+  color: white;
+  text-align: center;
+  margin-left: 15px;
+  margin-top: 30px;
+}
+.nextDaysComponent {
+  background: url("pic/nextDaysBackground.png");
+  min-height: 100svh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 15px 30px;
+  text-shadow: none;
+  animation: movingNextDaysBackground 10s ease infinite;
+}
+.back {
+  font-size: 1.2rem;
+}
+.nextDaysHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.thisWeek {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+.thisWeek > h3 {
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+}
+.listOfDays {
+  margin-top: 20px;
+}
+.day {
+  color: rgba(255, 255, 255, 0.64);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: .4s;
+  padding: 1.3em;
+}
+.panel {
+  padding: 0 18px;
+  color: white;
+  overflow: hidden;
+  transition: max-height .2s ease-in-out;
+  
+}
+.daysHr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.day > p {
+  font-size: 15px;
+  width: 50px;
+}
+.day > div {
+  display: flex;
+  align-items: center;
+}
+.addMargin {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.nextDaysTemp {
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+}
+.high {
+  color: white;
+  font-size: 25px;
+}
+.cloudRainSun {
+  height: 120px;
+}
+.hourlyTemps {
+  display: flex;
+  overflow-x: scroll;
+}
+.weatherCard {
+  text-align: center;
+  margin: 10px;
+}
+
+@keyframes movingBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
