@@ -107,7 +107,7 @@ export default function Home() {
   
   return (
     <main className={`homeComponent ${weather.current_weather && determineCurrentWeather()[0]}`}>
-      {weather.current_weather == undefined && <div className="loading"><div><div className="spinner"></div><p className="pleaseWait">Please Wait...</p></div></div>}
+      {weather.current_weather == undefined && <div className="loading"><div><div className="spinner"></div><p className="pleaseWait">If the app is taking too long to load, please double check to see if your location is enabled.</p></div></div>}
       <div className="topSection">
         <h2 className="cityName">{city}</h2>
         <div className="greetingWrapper"><h1 className="greeting">Good {determineTime()}</h1><img src="pic/threeDots.png" className="threeDots" onClick={open} /></div>
