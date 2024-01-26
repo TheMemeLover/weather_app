@@ -1,5 +1,5 @@
 ## Demo
-https://les.tulsacity2.repl.co/
+https://replit.com/@tulsacity2/Les
 Make sure to use the app on a mobile-sized screen
 
 ## Running React on Repl.it
